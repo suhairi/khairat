@@ -37,6 +37,24 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
     });
 
 
+    Route::group(['prefix' => 'carian'], function() {
+
+        Route::get('/nama', [
+            'as'    => 'admin.carian.nama',
+            'uses'  => 'Admin\Carian\CarianController@nama'
+        ]);
+
+
+
+
+        // API
+
+        Route::get('/API/members', function() {
+            return App\Members::all();
+        });
+    });
+
+
 
 
     

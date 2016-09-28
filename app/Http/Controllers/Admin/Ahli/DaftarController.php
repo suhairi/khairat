@@ -16,7 +16,7 @@ class DaftarController extends Controller
 {
     public function daftar() {
 
-        $members = Members::orderBy('nama', 'asc')->paginate(20);
+        $members = Members::orderBy('nama', 'asc')->paginate(15);
 
         return view('admin.ahli.index', compact('members'));
     }
@@ -26,7 +26,7 @@ class DaftarController extends Controller
         $validation = Validator::make($request->all(), [
             'nama'      => 'required',
             'nokp'      => 'required',
-            'no_ahli'   => 'required'
+            'no_ahli'   => 'required|'
        ]);
 
         if($validation->fails()) {

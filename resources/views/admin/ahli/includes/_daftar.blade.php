@@ -1,4 +1,4 @@
-<div class="col-xs-4">
+<div class="col-xs-3">
     <div class="panel panel-primary">
         <div class="panel-heading"><h4><span class="glyphicon glyphicon-pencil">&nbsp;&nbsp;&nbsp;Daftar Ahli Baru</span></h4></div>
         <div class="panel panel-body">
