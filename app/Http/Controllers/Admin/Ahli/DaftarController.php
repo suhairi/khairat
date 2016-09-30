@@ -62,6 +62,6 @@ class DaftarController extends Controller
             Session::flash('error', 'Gagal. Daftar Ahli Baru gagal.');
         }
 
-        return redirect('/daftar');
+        return redirect('/admin/ahli/daftar');
     }
 }

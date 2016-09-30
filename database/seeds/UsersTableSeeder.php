@@ -2,10 +2,10 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
-use Faker\Factory;
-use Faker\Generator;
 
 use App\Members;
+use Faker\Factory;
+use Faker\Generator;
 
 class UsersTableSeeder extends Seeder
 {
@@ -20,6 +20,10 @@ class UsersTableSeeder extends Seeder
             'name'      => 'Suhairi Abdul Hamid',
             'email'     => 'suhairi81@gmail.com',
             'password'  => bcrypt('suhairi')
-        ]);      
+        ]);
+
+        factory('App\User', 10)->create();
     }
+
+    
 }
