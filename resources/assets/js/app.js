@@ -14,7 +14,7 @@ require('./bootstrap');
  */
 
 Vue.component('example', require('./components/Example.vue'));
-Vue.component('carian', require('./components/Carian.vue'));
+Vue.component('carian', require('./components/Users'));
 
 const app = new Vue({
     el: 'body'

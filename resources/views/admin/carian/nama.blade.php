@@ -6,7 +6,7 @@
 <div class="container">
 
     <h1>Carian nama</h1>
-    <carian></carian>
+    <carian ></carian>
 
     
 </div>

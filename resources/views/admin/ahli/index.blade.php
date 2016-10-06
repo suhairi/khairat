@@ -2,11 +2,15 @@
 
 @section('content')
 
+<div id="my_users">
+
 <div class="container">
     
     <div class="row">
 
         @include('admin.ahli.includes._daftar')
+
+        @{{ message }}
 
         <div class="col-xs-9">
             <div class="panel panel-info">
@@ -25,36 +29,40 @@
                             <td><strong>Pilihan</strong></td>
                         </tr>
 
-                        @if(!empty($members))
+<!--                         @if(!empty($members))
 
-                            @foreach($members as $member)
-                            <tr>
-                                <td>{{ $member->nama }}</td>
-                                <td>{{ $member->nokp }}</td>
-                                <td>{{ $member->no_ahli }}</td>
-                                <td>{{ $member->dob->formatLocalized('%d %B %Y') }}</td>
-                                <td>{{ $member->no_tel }}</td>
-                                <td>{{ $member->alamat }}</td>
-                                <td>{{ $member->pekerjaan }}</td>
-                                <td>{{ $member->status }}</td>
-                                <td><a href=""><span class=""></span><button class="btn btn-primary glyphicon glyphicon-edit">  Kemaskini</button></a></td>
+                            @foreach($members as $member) -->
+                            <tr v-for="user in users">
+                                <td>@{{ user.nama }}</td>
+                                <td>@{{ user.nokp }}</td>
+                                <td>@{{ user.no_ahli }}</td>
+                                <td>@{{ user.dob }}</td>
+                                <td>@{{ user.no_tel }}</td>
+                                <td>@{{ user.alamat }}</td>
+                                <td>@{{ user.pekerjaan }}</td>
+                                <td>@{{ user.status }}</td>
+                                <td>
+                                    <button class="btn btn-primary glyphicon glyphicon-edit" @click="updateMember(user)">  Kemaskini</button>
+                                </td>
                             </tr>
-                            @endforeach
+  <!--                           @endforeach
 
                         @else
                             <tr>
                                 <td colspan="8" class="alert alert-danger">Tiada Data.</td>
                             </tr>
 
-                        @endif
+                        @endif -->
                     </table>
 
-                    <div align="center">{{ $members->links() }}</div>
+                   
                 </div>
             </div>
         </div>
         
     </div>
+
+</div>
 
 </div>
 

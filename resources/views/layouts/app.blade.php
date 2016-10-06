@@ -59,7 +59,7 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Terimaan</a></li>
+                            <li><a href="{{ route('admin.terimaan.index') }}">Terimaan</a></li>
                             <li><a href="#">Sumbangan</a></li>
                             <li><a href="#">Pembelian</a></li>
                             <li><a href="#">Terimaan</a></li>
